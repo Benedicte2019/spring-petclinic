@@ -6,6 +6,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+
         stage('SonarQube Analysis') {
             environment {
                 scannerHome = tool 'SonarQube Scanner'
